@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready-Made Websites - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .logo-font { font-family: 'Poppins', sans-serif; }
+        .nav-shadow { box-shadow: 0 4px 20px rgba(14, 165, 233, 0.08); }
+        .card-shadow { box-shadow: 0 10px 40px rgba(14, 165, 233, 0.08); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(14, 165, 233, 0.12); }
+        .btn-gradient { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .btn-gradient:hover { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md nav-shadow border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2.5">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-xl flex items-center justify-center shadow-lg shadow-sky-200">
+                        <span class="text-white font-bold text-lg logo-font">A</span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold logo-font tracking-tight text-sky-600">AFN</span>
+                        <span class="text-xl font-semibold logo-font text-slate-700"> Tech</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Home</a>
+                    <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Services</a>
+                    <a href="pricing.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Pricing</a>
+                    <a href="portfolio.html" class="px-3 py-2 rounded-lg text-sm font-medium text-sky-600 bg-sky-50">Ready Sites</a>
+                    <a href="team.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Team</a>
+                    <a href="login.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Login</a>
+                    <a href="contact.html" class="ml-2 btn-gradient text-white px-5 py-2 rounded-full text-sm font-semibold">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sky-100">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2">Home</a>
+                <a href="services.html" class="block px-3 py-2">Services</a>
+                <a href="pricing.html" class="block px-3 py-2">Pricing</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-sky-600 bg-sky-50 rounded-lg">Ready Sites</a>
+                <a href="team.html" class="block px-3 py-2">Team</a>
+                <a href="login.html" class="block px-3 py-2">Login</a>
+                <a href="contact.html" class="block mt-2 btn-gradient text-white text-center py-2.5 rounded-lg font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-28 pb-12 bg-gradient-to-b from-sky-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Ready-Made Websites</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-lg">Pre-built high-quality websites ready for quick customization. Pay with bKash (01624-985512) and start immediately.</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-[#fffbeb]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Agency" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Modern Agency Pro</h3>
+                            <span class="text-sky-600 font-bold">৳12,000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Full agency website with services, portfolio, team, blog & contact.</p>
+                        <a href="order.html?package=Modern Agency Pro&price=12000" class="block text-center btn-gradient text-white py-2.5 rounded-xl text-sm font-semibold">Order Now</a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Ecommerce" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">ShopFlow E-commerce</h3>
+                            <span class="text-sky-600 font-bold">৳22,000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Complete online store with cart, checkout and multi-payment support.</p>
+                        <a href="order.html?package=ShopFlow E-commerce&price=22000" class="block text-center btn-gradient text-white py-2.5 rounded-xl text-sm font-semibold">Order Now</a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241c7c03aa0?w=600&q=80" alt="Portfolio" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Creative Portfolio</h3>
+                            <span class="text-sky-600 font-bold">৳8,000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Elegant portfolio for freelancers with smooth animations.</p>
+                        <a href="order.html?package=Creative Portfolio&price=8000" class="block text-center btn-gradient text-white py-2.5 rounded-xl text-sm font-semibold">Order Now</a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">HotelBook Pro</h3>
+                            <span class="text-sky-600 font-bold">৳28,000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Full hotel booking system with room management and payments.</p>
+                        <a href="order.html?package=HotelBook Pro&price=28000" class="block text-center btn-gradient text-white py-2.5 rounded-xl text-sm font-semibold">Order Now</a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&q=80" alt="LMS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">LearnHub LMS</h3>
+                            <span class="text-sky-600 font-bold">৳25,000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Online course platform with video lessons, quizzes and certificates.</p>
+                        <a href="order.html?package=LearnHub LMS&price=25000" class="block text-center btn-gradient text-white py-2.5 rounded-xl text-sm font-semibold">Order Now</a>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Foodie Order</h3>
+                            <span class="text-sky-600 font-bold">৳18,000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Restaurant ordering website with digital menu and tracking.</p>
+                        <a href="order.html?package=Foodie Order&price=18000" class="block text-center btn-gradient text-white py-2.5 rounded-xl text-sm font-semibold">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-14 bg-white rounded-2xl p-8 card-shadow border border-sky-100 text-center">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Secure Payment Options</h3>
+                <p class="text-slate-500 mb-6">All products support multiple payment methods.</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-5 py-2.5 bg-pink-50 text-pink-600 rounded-full font-medium border border-pink-100">bKash 01624-985512</span>
+                    <span class="px-5 py-2.5 bg-orange-50 text-orange-600 rounded-full font-medium border border-orange-100">Nagad</span>
+                    <span class="px-5 py-2.5 bg-blue-50 text-blue-600 rounded-full font-medium border border-blue-100">PayPal</span>
+                    <span class="px-5 py-2.5 bg-indigo-50 text-indigo-600 rounded-full font-medium border border-indigo-100">Stripe</span>
+                    <span class="px-5 py-2.5 bg-emerald-50 text-emerald-600 rounded-full font-medium border border-emerald-100">Bank</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-sky-500 to-sky-400 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">A</span></div>
+                        <span class="text-lg font-bold text-white logo-font">AFN Tech</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Professional website development & automation solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="hover:text-sky-400">Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-sky-400">Pricing</a></li>
+                        <li><a href="portfolio.html" class="hover:text-sky-400">Ready Sites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="team.html" class="hover:text-sky-400">Our Team</a></li>
+                        <li><a href="login.html" class="hover:text-sky-400">Login</a></li>
+                        <li><a href="contact.html" class="hover:text-sky-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Payment</h4>
+                    <p class="text-sm text-slate-400">bKash: 01624-985512</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-6 text-center text-sm text-slate-500">© 2025 AFN Tech. All rights reserved.</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

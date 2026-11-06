@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .logo-font { font-family: 'Poppins', sans-serif; }
+        .nav-shadow { box-shadow: 0 4px 20px rgba(14, 165, 233, 0.08); }
+        .card-shadow { box-shadow: 0 10px 40px rgba(14, 165, 233, 0.08); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(14, 165, 233, 0.12); }
+        .btn-gradient { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .btn-gradient:hover { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md nav-shadow border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2.5">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-xl flex items-center justify-center shadow-lg shadow-sky-200">
+                        <span class="text-white font-bold text-lg logo-font">A</span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold logo-font tracking-tight text-sky-600">AFN</span>
+                        <span class="text-xl font-semibold logo-font text-slate-700"> Tech</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Home</a>
+                    <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-sky-600 bg-sky-50">Services</a>
+                    <a href="pricing.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Pricing</a>
+                    <a href="portfolio.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Ready Sites</a>
+                    <a href="team.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Team</a>
+                    <a href="login.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Login</a>
+                    <a href="contact.html" class="ml-2 btn-gradient text-white px-5 py-2 rounded-full text-sm font-semibold">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sky-100">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-sky-600 bg-sky-50 rounded-lg">Services</a>
+                <a href="pricing.html" class="block px-3 py-2">Pricing</a>
+                <a href="portfolio.html" class="block px-3 py-2">Ready Sites</a>
+                <a href="team.html" class="block px-3 py-2">Team</a>
+                <a href="login.html" class="block px-3 py-2">Login</a>
+                <a href="contact.html" class="block mt-2 btn-gradient text-white text-center py-2.5 rounded-lg font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-28 pb-12 bg-gradient-to-b from-sky-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Our Website Services</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-lg">We build specialized websites for every business need. All with secure payment integration.</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-[#fffbeb]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Agency" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Agency Website</h3>
+                        <p class="text-slate-500 text-sm mb-4">Professional websites for digital agencies and service providers. Showcase portfolio, team, services and lead forms.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">Full-Stack</span>
+                            <span class="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded">CMS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&q=80" alt="LMS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">LMS Platform</h3>
+                        <p class="text-slate-500 text-sm mb-4">Learning Management Systems with courses, quizzes, student dashboards, progress tracking and certificates.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">MERN</span>
+                            <span class="text-xs px-2 py-1 bg-emerald-100 text-emerald-700 rounded">Full-Stack</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241c7c03aa0?w=600&q=80" alt="Portfolio" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Portfolio Website</h3>
+                        <p class="text-slate-500 text-sm mb-4">Elegant personal or creative portfolios for designers, developers and freelancers with smooth animations.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">React</span>
+                            <span class="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="E-commerce" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">E-commerce Website</h3>
+                        <p class="text-slate-500 text-sm mb-4">Full online stores with product catalogs, cart, checkout and multi-payment support (bKash, Nagad, Stripe).</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-emerald-100 text-emerald-700 rounded">Shopify</span>
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">WooCommerce</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Examination" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Examination Website</h3>
+                        <p class="text-slate-500 text-sm mb-4">Secure online examination platforms with timed tests, auto-grading, result publishing and anti-cheating features.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">MERN</span>
+                            <span class="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded">Secure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Travel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Travel & Tourism</h3>
+                        <p class="text-slate-500 text-sm mb-4">Tour packages, destination guides, booking engines and multi-currency payment gateways for travel agencies.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">Full-Stack</span>
+                            <span class="text-xs px-2 py-1 bg-cyan-100 text-cyan-700 rounded">Booking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Appointment" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Appointment Booking</h3>
+                        <p class="text-slate-500 text-sm mb-4">Smart scheduling systems for clinics, salons and consultants with calendar sync and online payments.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">React</span>
+                            <span class="text-xs px-2 py-1 bg-orange-100 text-orange-700 rounded">Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Food Ordering</h3>
+                        <p class="text-slate-500 text-sm mb-4">Restaurant websites with digital menus, online ordering, real-time tracking and delivery management.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">MERN</span>
+                            <span class="text-xs px-2 py-1 bg-red-100 text-red-700 rounded">Real-time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white border border-slate-100 rounded-2xl overflow-hidden card-shadow">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Hotel Booking</h3>
+                        <p class="text-slate-500 text-sm mb-4">Complete hotel & resort booking platforms with room availability, guest management and secure payments.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded">Full-Stack</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-700 rounded">Booking Engine</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">Need a Custom Website?</h2>
+            <p class="text-slate-500 mb-8">Tell us your requirements and get the best deal with full payment integration support.</p>
+            <a href="contact.html" class="inline-block btn-gradient text-white px-8 py-3.5 rounded-full font-semibold">Get Free Consultation</a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-sky-500 to-sky-400 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">A</span></div>
+                        <span class="text-lg font-bold text-white logo-font">AFN Tech</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Professional website development & automation solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="hover:text-sky-400">Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-sky-400">Pricing</a></li>
+                        <li><a href="portfolio.html" class="hover:text-sky-400">Ready Sites</a></li>
+                        <li><a href="contact.html" class="hover:text-sky-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="team.html" class="hover:text-sky-400">Our Team</a></li>
+                        <li><a href="login.html" class="hover:text-sky-400">Login</a></li>
+                        <li><a href="contact.html" class="hover:text-sky-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Payment</h4>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="px-3 py-1 bg-slate-800 rounded">bKash</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded">Nagad</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded">PayPal</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded">Stripe</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3">bKash: 01624-985512</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-6 text-center text-sm text-slate-500">© 2025 AFN Tech. All rights reserved.</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

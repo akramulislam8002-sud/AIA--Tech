@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologies - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15); }
+    </style>
+</head>
+<body class="bg-darker text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold text-xl">A</div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AFN Tech</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-primary transition">Home</a>
+                    <a href="services.html" class="hover:text-primary transition">Services</a>
+                    <a href="technologies.html" class="text-primary font-medium">Technologies</a>
+                    <a href="automation.html" class="hover:text-primary transition">Automation</a>
+                    <a href="portfolio.html" class="hover:text-primary transition">Ready Sites</a>
+                    <a href="team.html" class="hover:text-primary transition">Team</a>
+                    <a href="future.html" class="hover:text-primary transition">Future AI</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-primary to-secondary px-5 py-2 rounded-full font-medium hover:opacity-90 transition">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-t border-white/10">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block hover:text-primary">Home</a>
+                <a href="services.html" class="block hover:text-primary">Services</a>
+                <a href="technologies.html" class="block text-primary">Technologies</a>
+                <a href="automation.html" class="block hover:text-primary">Automation</a>
+                <a href="portfolio.html" class="block hover:text-primary">Ready Sites</a>
+                <a href="team.html" class="block hover:text-primary">Team</a>
+                <a href="future.html" class="block hover:text-primary">Future AI</a>
+                <a href="contact.html" class="block bg-primary text-center py-2 rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="gradient-bg pt-28 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Technologies We Use</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">Modern, secure, and scalable tech stacks for Full-Stack, MERN, CMS, and AI-powered websites. We prioritize security against cyber attacks.</p>
+        </div>
+    </section>
+
+    <!-- MERN Section -->
+    <section class="py-16 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center">
+                    <i class="fab fa-node-js text-2xl text-green-400"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold">MERN Stack</h2>
+                    <p class="text-gray-400">MongoDB • Express.js • React.js • Node.js</p>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
+                    <h4 class="font-semibold">HTML5</h4>
+                    <p class="text-xs text-gray-400 mt-1">Semantic structure</p>
+                </div>
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3"></i>
+                    <h4 class="font-semibold">CSS3 + Tailwind</h4>
+                    <p class="text-xs text-gray-400 mt-1">Utility-first styling</p>
+                </div>
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fab fa-js text-4xl text-yellow-400 mb-3"></i>
+                    <h4 class="font-semibold">JavaScript</h4>
+                    <p class="text-xs text-gray-400 mt-1">Core interactivity</p>
+                </div>
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fab fa-react text-4xl text-cyan-400 mb-3"></i>
+                    <h4 class="font-semibold">React.js</h4>
+                    <p class="text-xs text-gray-400 mt-1">Component UI library</p>
+                </div>
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fab fa-node-js text-4xl text-green-500 mb-3"></i>
+                    <h4 class="font-semibold">Node.js</h4>
+                    <p class="text-xs text-gray-400 mt-1">Server runtime</p>
+                </div>
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-server text-4xl text-gray-300 mb-3"></i>
+                    <h4 class="font-semibold">Express.js</h4>
+                    <p class="text-xs text-gray-400 mt-1">Backend framework</p>
+                </div>
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-database text-4xl text-green-600 mb-3"></i>
+                    <h4 class="font-semibold">MongoDB</h4>
+                    <p class="text-xs text-gray-400 mt-1">NoSQL database</p>
+                </div>
+                <div class="card-hover bg-darker border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-wind text-4xl text-sky-400 mb-3"></i>
+                    <h4 class="font-semibold">Tailwind CSS</h4>
+                    <p class="text-xs text-gray-400 mt-1">Rapid UI development</p>
+                </div>
+            </div>
+            <p class="mt-8 text-gray-400 text-sm max-w-3xl">Ideal for dynamic single-page applications, real-time dashboards, custom admin panels, and high-performance web apps that need full control over frontend and backend.</p>
+        </div>
+    </section>
+
+    <!-- Full-Stack Section -->
+    <section class="py-16 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-layer-group text-2xl text-primary"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold">Advanced Full-Stack</h2>
+                    <p class="text-gray-400">React • Next.js • Python • Django • Flask • TypeScript & more</p>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fab fa-react text-4xl text-cyan-400 mb-3"></i>
+                    <h4 class="font-semibold">React.js + Next.js</h4>
+                    <p class="text-xs text-gray-400 mt-1">SSR, SSG, App Router</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fab fa-python text-4xl text-yellow-300 mb-3"></i>
+                    <h4 class="font-semibold">Python</h4>
+                    <p class="text-xs text-gray-400 mt-1">Versatile backend language</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-leaf text-4xl text-green-500 mb-3"></i>
+                    <h4 class="font-semibold">Django</h4>
+                    <p class="text-xs text-gray-400 mt-1">Batteries-included framework</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-flask text-4xl text-gray-300 mb-3"></i>
+                    <h4 class="font-semibold">Flask</h4>
+                    <p class="text-xs text-gray-400 mt-1">Lightweight micro-framework</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-database text-4xl text-blue-400 mb-3"></i>
+                    <h4 class="font-semibold">MySQL</h4>
+                    <p class="text-xs text-gray-400 mt-1">Relational database</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-code text-4xl text-blue-500 mb-3"></i>
+                    <h4 class="font-semibold">TypeScript</h4>
+                    <p class="text-xs text-gray-400 mt-1">Type-safe JavaScript</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-magic text-4xl text-purple-400 mb-3"></i>
+                    <h4 class="font-semibold">GSAP</h4>
+                    <p class="text-xs text-gray-400 mt-1">Advanced animations</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-plug text-4xl text-orange-400 mb-3"></i>
+                    <h4 class="font-semibold">REST & GraphQL APIs</h4>
+                    <p class="text-xs text-gray-400 mt-1">Data communication</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-wind text-4xl text-sky-400 mb-3"></i>
+                    <h4 class="font-semibold">Tailwind CSS</h4>
+                    <p class="text-xs text-gray-400 mt-1">Modern styling</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-box text-4xl text-blue-300 mb-3"></i>
+                    <h4 class="font-semibold">Docker</h4>
+                    <p class="text-xs text-gray-400 mt-1">Containerization</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-cloud text-4xl text-orange-300 mb-3"></i>
+                    <h4 class="font-semibold">AWS / Vercel</h4>
+                    <p class="text-xs text-gray-400 mt-1">Cloud hosting & deploy</p>
+                </div>
+                <div class="card-hover bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-bolt text-4xl text-yellow-400 mb-3"></i>
+                    <h4 class="font-semibold">Framer Motion</h4>
+                    <p class="text-xs text-gray-400 mt-1">React animations</p>
+                </div>
+            </div>
+            <p class="mt-8 text-gray-400 text-sm max-w-3xl">Perfect for SEO-critical sites, complex business logic, high-traffic applications, and projects requiring TypeScript safety, server-side rendering, or Python data processing power.</p>
+        </div>
+    </section>
+
+    <!-- CMS Section -->
+    <section class="py-16 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                    <i class="fab fa-wordpress text-2xl text-blue-400"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold">CMS Platforms</h2>
+                    <p class="text-gray-400">WordPress • Shopify • Wix</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- WordPress -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fab fa-wordpress text-3xl text-blue-400"></i>
+                        <h3 class="text-xl font-bold">WordPress</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-300 mb-4">
+                        <li><i class="fas fa-check text-primary mr-2"></i>Elementor Page Builder</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Divi Builder</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>WooCommerce (E-commerce)</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Advanced Custom Fields (ACF)</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Yoast / Rank Math SEO</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>WP Rocket & Caching</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Custom Theme Development</li>
+                    </ul>
+                    <p class="text-xs text-gray-400">Best for blogs, corporate sites, membership platforms, and flexible content management with powerful plugins.</p>
+                </div>
+
+                <!-- Shopify -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fab fa-shopify text-3xl text-green-500"></i>
+                        <h3 class="text-xl font-bold">Shopify</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-300 mb-4">
+                        <li><i class="fas fa-check text-primary mr-2"></i>Liquid Templating</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Theme Customization</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Shopify Apps Ecosystem</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Shopify Payments & Checkout</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Storefront API / Hydrogen</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Inventory & Order Management</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Multi-channel Selling</li>
+                    </ul>
+                    <p class="text-xs text-gray-400">Ideal for professional online stores that need reliable hosting, payments, and scaling without server management.</p>
+                </div>
+
+                <!-- Wix -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-globe text-3xl text-yellow-400"></i>
+                        <h3 class="text-xl font-bold">Wix</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-300 mb-4">
+                        <li><i class="fas fa-check text-primary mr-2"></i>Drag & Drop Editor</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Wix ADI (AI Design)</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Wix Stores / Bookings</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>App Market Integrations</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>SEO & Marketing Tools</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Fast Setup & Hosting</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Mobile Optimization</li>
+                    </ul>
+                    <p class="text-xs text-gray-400">Great for quick launches, small businesses, and clients who want easy self-management after handover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="py-16 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Security Technologies</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">We implement multiple layers of protection so your website stays safe from cyber attacks, data breaches, and common vulnerabilities.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-shield-alt text-2xl text-green-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">Cloudflare + WAF</h4>
+                    <p class="text-xs text-gray-400">DDoS protection, Web Application Firewall, bot management & CDN.</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-lock text-2xl text-blue-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">SSL / TLS (HTTPS)</h4>
+                    <p class="text-xs text-gray-400">Let's Encrypt & premium certificates for encrypted data transfer.</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-user-shield text-2xl text-purple-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">Helmet.js & CSP</h4>
+                    <p class="text-xs text-gray-400">Secure HTTP headers and Content Security Policy against XSS.</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-key text-2xl text-yellow-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">JWT + bcrypt</h4>
+                    <p class="text-xs text-gray-400">Secure authentication, password hashing, and token management.</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-ban text-2xl text-red-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">Rate Limiting</h4>
+                    <p class="text-xs text-gray-400">Prevent brute-force and abuse with intelligent rate limits.</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-check-double text-2xl text-cyan-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">Input Sanitization</h4>
+                    <p class="text-xs text-gray-400">Protect against SQL injection, XSS, and form-based attacks.</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-robot text-2xl text-orange-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">reCAPTCHA / Turnstile</h4>
+                    <p class="text-xs text-gray-400">Bot protection on forms and sensitive actions.</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5">
+                    <i class="fas fa-search text-2xl text-pink-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">OWASP Best Practices</h4>
+                    <p class="text-xs text-gray-400">Regular audits following OWASP Top 10 security standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold">A</div>
+                        <span class="text-lg font-bold">AFN Tech</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Professional website development & automation solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="technologies.html" class="hover:text-primary">Technologies</a></li>
+                        <li><a href="automation.html" class="hover:text-primary">Automation</a></li>
+                        <li><a href="portfolio.html" class="hover:text-primary">Ready Sites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="team.html" class="hover:text-primary">Our Team</a></li>
+                        <li><a href="future.html" class="hover:text-primary">Future AI</a></li>
+                        <li><a href="contact.html" class="hover:text-primary">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Payment Methods</h4>
+                    <div class="flex flex-wrap gap-2 text-sm text-gray-400">
+                        <span class="px-3 py-1 bg-white/5 rounded">bKash</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Nagad</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">PayPal</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Stripe</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Bank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-gray-500">© 2025 AFN Tech. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

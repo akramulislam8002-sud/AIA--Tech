@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#38bdf8',
+                        cream: '#fffbeb',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .logo-font { font-family: 'Poppins', sans-serif; }
+        .nav-shadow { box-shadow: 0 4px 20px rgba(14, 165, 233, 0.08); }
+        .card-shadow { box-shadow: 0 10px 40px rgba(14, 165, 233, 0.08); }
+        .btn-gradient { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .btn-gradient:hover { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md nav-shadow border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2.5">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-xl flex items-center justify-center shadow-lg shadow-sky-200">
+                        <span class="text-white font-bold text-lg logo-font">A</span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold logo-font tracking-tight text-sky-600">AFN</span>
+                        <span class="text-xl font-semibold logo-font text-slate-700"> Tech</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Home</a>
+                    <a href="pricing.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Pricing</a>
+                    <a href="portfolio.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Ready Sites</a>
+                    <a href="contact.html" class="ml-2 btn-gradient text-white px-5 py-2 rounded-full text-sm font-semibold">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sky-100">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2">Home</a>
+                <a href="pricing.html" class="block px-3 py-2">Pricing</a>
+                <a href="portfolio.html" class="block px-3 py-2">Ready Sites</a>
+                <a href="contact.html" class="block mt-2 btn-gradient text-white text-center py-2.5 rounded-lg font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-28 pb-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Complete Your Order</h1>
+                <p class="text-slate-500">Fill the form after paying via bKash. We will receive instant notification.</p>
+            </div>
+
+            <!-- bKash Box -->
+            <div class="bg-pink-50 border border-pink-200 rounded-2xl p-6 mb-8 text-center">
+                <p class="text-sm text-pink-700 font-medium mb-2">Send Money (bKash Personal)</p>
+                <div class="text-3xl font-bold text-pink-600 tracking-wider mb-2">01624-985512</div>
+                <p class="text-sm text-slate-600">Put your <strong>Name</strong> or <strong>Order Package</strong> in the Reference / Note</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow border border-sky-100">
+                <form action="https://formsubmit.co/akramulislam8002@gmail.com" method="POST" class="space-y-5">
+                    <!-- FormSubmit settings for clear notification -->
+                    <input type="hidden" name="_subject" value="🔥 NEW ORDER + PAYMENT - AFN Tech Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
+                            <input type="text" name="customer_name" required placeholder="Your full name"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Phone Number *</label>
+                            <input type="tel" name="phone" required placeholder="01XXXXXXXXX"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Email *</label>
+                        <input type="email" name="email" required placeholder="your@email.com"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Package / Product *</label>
+                            <input type="text" name="package" id="package-input" required placeholder="e.g. Business Package"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Amount Paid (BDT) *</label>
+                            <input type="number" name="amount" id="amount-input" required placeholder="18000"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">bKash Transaction ID (TrxID) *</label>
+                        <input type="text" name="bkash_trxid" required placeholder="e.g. 8N7A2XXXXX"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                        <p class="text-xs text-slate-500 mt-1">You will find TrxID in your bKash SMS after payment</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Additional Notes</label>
+                        <textarea name="notes" rows="3" placeholder="Any special requirements or message..."
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 resize-none"></textarea>
+                    </div>
+
+                    <div class="bg-sky-50 border border-sky-100 rounded-xl p-4 text-sm text-slate-600">
+                        <i class="fas fa-info-circle text-sky-500 mr-2"></i>
+                        After submitting, we will receive an instant email notification notification with your order details, amount and bKash TrxID. We will verify the payment and contact you shortly.
+                    </div>
+
+                    <button type="submit" class="w-full btn-gradient text-white py-3.5 rounded-xl font-semibold text-lg shadow-md shadow-sky-200 hover:shadow-lg transition">
+                        Submit Order & Payment Info <i class="fas fa-check-circle ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-500">
+            © 2025 AFN Tech. Secure Order System.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Auto-fill package & price from URL
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('package')) {
+            document.getElementById('package-input').value = params.get('package') + ' Package';
+        }
+        if (params.get('price')) {
+            document.getElementById('amount-input').value = params.get('price');
+        }
+    </script>
+</body>
+</html>

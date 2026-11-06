@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create My Own Website - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .logo-font { font-family: 'Poppins', sans-serif; }
+        .nav-shadow { box-shadow: 0 4px 20px rgba(14, 165, 233, 0.08); }
+        .card-shadow { box-shadow: 0 10px 40px rgba(14, 165, 233, 0.08); }
+        .btn-gradient { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .btn-gradient:hover { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+        .option-card { transition: all 0.25s ease; cursor: pointer; }
+        .option-card:hover { transform: translateY(-4px); border-color: #0ea5e9; }
+        .option-card.selected { border-color: #0ea5e9; background: #f0f9ff; box-shadow: 0 0 0 3px rgba(14,165,233,0.15); }
+        .step-dot { transition: all 0.3s; }
+        .step-dot.active { background: #0ea5e9; color: white; }
+        .step-dot.done { background: #10b981; color: white; }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md nav-shadow border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2.5">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-xl flex items-center justify-center shadow-lg shadow-sky-200">
+                        <span class="text-white font-bold text-lg logo-font">A</span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold logo-font tracking-tight text-sky-600">AFN</span>
+                        <span class="text-xl font-semibold logo-font text-slate-700"> Tech</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Home</a>
+                    <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Services</a>
+                    <a href="pricing.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50">Pricing</a>
+                    <a href="create.html" class="px-3 py-2 rounded-lg text-sm font-medium text-sky-600 bg-sky-50">Create Website</a>
+                    <a href="contact.html" class="ml-2 btn-gradient text-white px-5 py-2 rounded-full text-sm font-semibold">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sky-100">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2">Home</a>
+                <a href="pricing.html" class="block px-3 py-2">Pricing</a>
+                <a href="create.html" class="block px-3 py-2 text-sky-600 bg-sky-50 rounded-lg">Create Website</a>
+                <a href="contact.html" class="block mt-2 btn-gradient text-white text-center py-2.5 rounded-lg font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-28 pb-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Progress Steps -->
+            <div class="flex items-center justify-center gap-2 mb-12">
+                <div class="flex items-center gap-2">
+                    <div id="dot1" class="step-dot active w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                    <span class="text-sm font-medium text-slate-600 hidden sm:inline">Technology</span>
+                </div>
+                <div class="w-8 sm:w-16 h-0.5 bg-slate-200"></div>
+                <div class="flex items-center gap-2">
+                    <div id="dot2" class="step-dot w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center text-sm font-bold text-slate-500">2</div>
+                    <span class="text-sm font-medium text-slate-600 hidden sm:inline">Website Type</span>
+                </div>
+                <div class="w-8 sm:w-16 h-0.5 bg-slate-200"></div>
+                <div class="flex items-center gap-2">
+                    <div id="dot3" class="step-dot w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center text-sm font-bold text-slate-500">3</div>
+                    <span class="text-sm font-medium text-slate-600 hidden sm:inline">Features</span>
+                </div>
+                <div class="w-8 sm:w-16 h-0.5 bg-slate-200"></div>
+                <div class="flex items-center gap-2">
+                    <div id="dot4" class="step-dot w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center text-sm font-bold text-slate-500">4</div>
+                    <span class="text-sm font-medium text-slate-600 hidden sm:inline">Pricing</span>
+                </div>
+            </div>
+
+            <!-- Step 1: Technology -->
+            <div id="step1" class="step-content">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">What type of website do you prefer?</h1>
+                    <p class="text-slate-500">Choose the technology that best fits your project</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div class="option-card border-2 border-slate-200 rounded-2xl p-6 text-center" onclick="selectTech(this, 'Full Stack')">
+                        <div class="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-layer-group text-2xl text-sky-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Full Stack</h3>
+                        <p class="text-sm text-slate-500">React, Next.js, Python, Django, Flask, MySQL, TypeScript</p>
+                    </div>
+                    <div class="option-card border-2 border-slate-200 rounded-2xl p-6 text-center" onclick="selectTech(this, 'MERN Stack')">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-react text-2xl text-emerald-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">MERN Stack</h3>
+                        <p class="text-sm text-slate-500">MongoDB, Express.js, React.js, Node.js + Tailwind</p>
+                    </div>
+                    <div class="option-card border-2 border-slate-200 rounded-2xl p-6 text-center" onclick="selectTech(this, 'WordPress')">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-wordpress text-2xl text-blue-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">WordPress</h3>
+                        <p class="text-sm text-slate-500">Elementor, Divi, WooCommerce, Easy to manage</p>
+                    </div>
+                    <div class="option-card border-2 border-slate-200 rounded-2xl p-6 text-center" onclick="selectTech(this, 'Shopify')">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-shopify text-2xl text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Shopify</h3>
+                        <p class="text-sm text-slate-500">Best for professional online stores & e-commerce</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Website Type -->
+            <div id="step2" class="step-content hidden">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Choose Website Type</h1>
+                    <p class="text-slate-500">What kind of website do you need?</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="type-options">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="flex justify-between mt-8">
+                    <button onclick="goToStep(1)" class="px-6 py-2.5 border border-slate-300 rounded-xl text-slate-600 font-medium hover:bg-slate-50">← Back</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Features -->
+            <div id="step3" class="step-content hidden">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Select Features</h1>
+                    <p class="text-slate-500">Choose the features you need (select multiple)</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-3" id="feature-options">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="flex justify-between mt-8">
+                    <button onclick="goToStep(2)" class="px-6 py-2.5 border border-slate-300 rounded-xl text-slate-600 font-medium hover:bg-slate-50">← Back</button>
+                    <button onclick="goToStep(4)" class="btn-gradient text-white px-8 py-2.5 rounded-xl font-semibold">See Pricing →</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Pricing Result -->
+            <div id="step4" class="step-content hidden">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Recommended Plan</h1>
+                    <p class="text-slate-500">Based on your selections</p>
+                </div>
+                <div class="bg-white border-2 border-sky-200 rounded-2xl p-8 card-shadow max-w-lg mx-auto text-center">
+                    <div class="inline-block px-4 py-1 bg-sky-100 text-sky-700 text-sm font-semibold rounded-full mb-4" id="result-badge">Recommended</div>
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2" id="result-plan">Business Plan</h2>
+                    <div class="text-5xl font-extrabold text-sky-600 mb-2" id="result-price">৳18,000</div>
+                    <p class="text-slate-500 mb-6" id="result-desc">Perfect for your selected requirements</p>
+                    
+                    <div class="bg-slate-50 rounded-xl p-4 text-left mb-6 text-sm">
+                        <p class="font-semibold text-slate-700 mb-2">Your Selections:</p>
+                        <p class="text-slate-600"><span class="font-medium">Technology:</span> <span id="sum-tech">-</span></p>
+                        <p class="text-slate-600"><span class="font-medium">Website Type:</span> <span id="sum-type">-</span></p>
+                        <p class="text-slate-600"><span class="font-medium">Features:</span> <span id="sum-features">-</span></p>
+                    </div>
+
+                    <div class="bg-pink-50 border border-pink-200 rounded-xl p-4 mb-6">
+                        <p class="text-sm text-pink-700 font-medium mb-1">Pay with bKash</p>
+                        <p class="text-xl font-bold text-pink-600">01624-985512</p>
+                    </div>
+
+                    <a id="order-btn" href="order.html" class="block w-full btn-gradient text-white py-3.5 rounded-xl font-semibold text-lg mb-3">
+                        Order Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <button onclick="goToStep(1)" class="text-slate-500 text-sm hover:text-sky-600">← Start Over</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-500">
+            © 2025 AFN Tech • Create Your Dream Website
+        </div>
+    </footer>
+
+    <script>
+        let selectedTech = '';
+        let selectedType = '';
+        let selectedFeatures = [];
+
+        const websiteTypes = {
+            'Full Stack': ['Agency Website', 'LMS Platform', 'E-commerce', 'Hotel Booking', 'Examination Website', 'Travel & Tourism'],
+            'MERN Stack': ['Agency Website', 'LMS Platform', 'Portfolio', 'E-commerce', 'Food Ordering', 'Appointment Booking'],
+            'WordPress': ['Agency Website', 'Portfolio', 'E-commerce', 'Blog / Corporate', 'Appointment Booking'],
+            'Shopify': ['E-commerce Store', 'Fashion Store', 'Electronics Store', 'Multi-vendor Store']
+        };
+
+        const featuresList = [
+            'Responsive Design', 'Contact Form', 'Payment Integration (bKash)', 'Admin Dashboard',
+            'SEO Optimization', 'Animation (GSAP)', 'User Login System', 'Booking System',
+            'Product Catalog', 'Order Tracking', 'Email Notification', 'Multi-language'
+        ];
+
+        function selectTech(el, tech) {
+            document.querySelectorAll('#step1 .option-card').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+            selectedTech = tech;
+            setTimeout(() => goToStep(2), 300);
+        }
+
+        function selectType(el, type) {
+            document.querySelectorAll('#step2 .option-card').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+            selectedType = type;
+            setTimeout(() => goToStep(3), 300);
+        }
+
+        function toggleFeature(el, feature) {
+            el.classList.toggle('selected');
+            if (selectedFeatures.includes(feature)) {
+                selectedFeatures = selectedFeatures.filter(f => f !== feature);
+            } else {
+                selectedFeatures.push(feature);
+            }
+        }
+
+        function goToStep(step) {
+            document.querySelectorAll('.step-content').forEach(s => s.classList.add('hidden'));
+            document.getElementById('step' + step).classList.remove('hidden');
+
+            // Update dots
+            for (let i = 1; i <= 4; i++) {
+                const dot = document.getElementById('dot' + i);
+                dot.classList.remove('active', 'done');
+                if (i < step) {
+                    dot.classList.add('done');
+                    dot.innerHTML = '<i class="fas fa-check text-xs"></i>';
+                } else if (i === step) {
+                    dot.classList.add('active');
+                    dot.textContent = i;
+                } else {
+                    dot.classList.add('bg-slate-200', 'text-slate-500');
+                    dot.textContent = i;
+                }
+            }
+
+            if (step === 2) {
+                const container = document.getElementById('type-options');
+                container.innerHTML = '';
+                (websiteTypes[selectedTech] || []).forEach(type => {
+                    container.innerHTML += `
+                        <div class="option-card border-2 border-slate-200 rounded-xl p-5 text-center" onclick="selectType(this, '${type}')">
+                            <h3 class="font-bold text-slate-800">${type}</h3>
+                        </div>`;
+                });
+            }
+
+            if (step === 3) {
+                const container = document.getElementById('feature-options');
+                container.innerHTML = '';
+                featuresList.forEach(f => {
+                    const isSelected = selectedFeatures.includes(f) ? 'selected' : '';
+                    container.innerHTML += `
+                        <div class="option-card border-2 border-slate-200 rounded-xl p-4 flex items-center gap-3 ${isSelected}" onclick="toggleFeature(this, '${f}')">
+                            <div class="w-5 h-5 rounded border-2 border-slate-300 flex items-center justify-center">
+                                <i class="fas fa-check text-xs text-sky-500 hidden check-icon"></i>
+                            </div>
+                            <span class="font-medium text-slate-700">${f}</span>
+                        </div>`;
+                });
+                // show checks for selected
+                document.querySelectorAll('#feature-options .option-card.selected .check-icon').forEach(i => i.classList.remove('hidden'));
+            }
+
+            if (step === 4) {
+                calculatePrice();
+            }
+        }
+
+        function calculatePrice() {
+            let price = 8000;
+            let plan = 'Starter';
+            let badge = 'Basic Recommendation';
+
+            if (selectedTech === 'Shopify' || selectedType.includes('E-commerce') || selectedType.includes('Hotel') || selectedType.includes('LMS')) {
+                price = 22000;
+                plan = 'Premium';
+                badge = 'Best Match';
+            } else if (selectedFeatures.length >= 6 || selectedTech === 'Full Stack' || selectedTech === 'MERN Stack') {
+                price = 18000;
+                plan = 'Business';
+                badge = 'Recommended';
+            } else if (selectedFeatures.length >= 3) {
+                price = 12000;
+                plan = 'Standard';
+                badge = 'Good Match';
+            }
+
+            if (selectedFeatures.includes('Admin Dashboard') || selectedFeatures.includes('Booking System')) {
+                price += 5000;
+            }
+            if (selectedFeatures.includes('Payment Integration (bKash)')) {
+                price += 2000;
+            }
+
+            document.getElementById('result-plan').textContent = plan + ' Plan';
+            document.getElementById('result-price').textContent = '৳' + price.toLocaleString();
+            document.getElementById('result-badge').textContent = badge;
+            document.getElementById('sum-tech').textContent = selectedTech;
+            document.getElementById('sum-type').textContent = selectedType;
+            document.getElementById('sum-features').textContent = selectedFeatures.length > 0 ? selectedFeatures.join(', ') : 'None selected';
+            document.getElementById('order-btn').href = `order.html?package=${encodeURIComponent(plan + ' - ' + selectedType)}&price=${price}`;
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

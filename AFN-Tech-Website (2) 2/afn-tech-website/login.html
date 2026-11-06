@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#38bdf8',
+                        cream: '#fffbeb',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .logo-font { font-family: 'Poppins', sans-serif; }
+        .card-shadow { box-shadow: 0 10px 40px rgba(14, 165, 233, 0.1); }
+        .btn-gradient { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .btn-gradient:hover { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-sky-50 via-white to-cream min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <!-- Logo -->
+        <div class="text-center mb-8">
+            <a href="index.html" class="inline-flex items-center space-x-2.5">
+                <div class="w-12 h-12 bg-gradient-to-br from-sky-500 to-sky-400 rounded-xl flex items-center justify-center shadow-lg shadow-sky-200">
+                    <span class="text-white font-bold text-xl logo-font">A</span>
+                </div>
+                <div>
+                    <span class="text-2xl font-bold logo-font tracking-tight text-sky-600">AFN</span>
+                    <span class="text-2xl font-semibold logo-font text-slate-700"> Tech</span>
+                </div>
+            </a>
+            <p class="text-slate-500 mt-3 text-sm">Login to access client area & track orders</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 card-shadow border border-sky-100">
+            <!-- Tabs -->
+            <div class="flex mb-6 bg-slate-100 rounded-xl p-1">
+                <button id="tab-login" onclick="showTab('login')" class="flex-1 py-2.5 rounded-lg text-sm font-semibold bg-white text-sky-600 shadow-sm">Login</button>
+                <button id="tab-register" onclick="showTab('register')" class="flex-1 py-2.5 rounded-lg text-sm font-semibold text-slate-500">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form">
+                <form onsubmit="handleLogin(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Email</label>
+                        <input type="email" id="login-email" required placeholder="your@email.com"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
+                        <input type="password" id="login-password" required placeholder="••••••••"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <label class="flex items-center gap-2 text-slate-600">
+                            <input type="checkbox" class="rounded border-slate-300 text-sky-500 focus:ring-sky-400"> Remember me
+                        </label>
+                        <a href="#" class="text-sky-600 hover:underline">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="w-full btn-gradient text-white py-3 rounded-xl font-semibold shadow-md shadow-sky-200">
+                        Login <i class="fas fa-sign-in-alt ml-2"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="hidden">
+                <form onsubmit="handleRegister(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Full Name</label>
+                        <input type="text" id="reg-name" required placeholder="Your full name"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Email</label>
+                        <input type="email" id="reg-email" required placeholder="your@email.com"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Phone</label>
+                        <input type="tel" id="reg-phone" required placeholder="01XXXXXXXXX"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
+                        <input type="password" id="reg-password" required minlength="6" placeholder="Minimum 6 characters"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+                    </div>
+                    <button type="submit" class="w-full btn-gradient text-white py-3 rounded-xl font-semibold shadow-md shadow-sky-200">
+                        Create Account <i class="fas fa-user-plus ml-2"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div id="message" class="hidden mt-4 p-3 rounded-xl text-sm text-center"></div>
+
+            <p class="text-xs text-slate-400 text-center mt-6">
+                <i class="fas fa-shield-alt mr-1"></i> This is a secure client area. Your data stays in your browser (demo mode).
+            </p>
+        </div>
+
+        <p class="text-center mt-6 text-sm text-slate-500">
+            <a href="index.html" class="text-sky-600 hover:underline"><i class="fas fa-arrow-left mr-1"></i> Back to Website</a>
+        </p>
+    </div>
+
+    <script>
+        function showTab(tab) {
+            document.getElementById('login-form').classList.toggle('hidden', tab !== 'login');
+            document.getElementById('register-form').classList.toggle('hidden', tab !== 'register');
+            document.getElementById('tab-login').className = tab === 'login' 
+                ? 'flex-1 py-2.5 rounded-lg text-sm font-semibold bg-white text-sky-600 shadow-sm'
+                : 'flex-1 py-2.5 rounded-lg text-sm font-semibold text-slate-500';
+            document.getElementById('tab-register').className = tab === 'register'
+                ? 'flex-1 py-2.5 rounded-lg text-sm font-semibold bg-white text-sky-600 shadow-sm'
+                : 'flex-1 py-2.5 rounded-lg text-sm font-semibold text-slate-500';
+            document.getElementById('message').classList.add('hidden');
+        }
+
+        function showMessage(text, isError = false) {
+            const msg = document.getElementById('message');
+            msg.textContent = text;
+            msg.className = `mt-4 p-3 rounded-xl text-sm text-center ${isError ? 'bg-red-50 text-red-600 border border-red-100' : 'bg-green-50 text-green-600 border border-green-100'}`;
+            msg.classList.remove('hidden');
+        }
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value.trim();
+            const email = document.getElementById('reg-email').value.trim().toLowerCase();
+            const phone = document.getElementById('reg-phone').value.trim();
+            const password = document.getElementById('reg-password').value;
+
+            let users = JSON.parse(localStorage.getItem('afn_users') || '[]');
+            if (users.find(u => u.email === email)) {
+                showMessage('This email is already registered. Please login.', true);
+                return;
+            }
+
+            users.push({ name, email, phone, password, createdAt: new Date().toISOString() });
+            localStorage.setItem('afn_users', JSON.stringify(users));
+            localStorage.setItem('afn_current_user', JSON.stringify({ name, email, phone }));
+            showMessage('Account created successfully! Redirecting...');
+            setTimeout(() => window.location.href = 'index.html', 1200);
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value.trim().toLowerCase();
+            const password = document.getElementById('login-password').value;
+
+            const users = JSON.parse(localStorage.getItem('afn_users') || '[]');
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (!user) {
+                showMessage('Invalid email or password.', true);
+                return;
+            }
+
+            localStorage.setItem('afn_current_user', JSON.stringify({ name: user.name, email: user.email, phone: user.phone }));
+            showMessage('Login successful! Redirecting...');
+            setTimeout(() => window.location.href = 'index.html', 1000);
+        }
+
+        // If already logged in
+        if (localStorage.getItem('afn_current_user')) {
+            // optional: redirect or show logout
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready-Made Websites - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2); }
+    </style>
+</head>
+<body class="bg-darker text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold text-xl">A</div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AFN Tech</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-primary transition">Home</a>
+                    <a href="services.html" class="hover:text-primary transition">Services</a>
+                    <a href="technologies.html" class="hover:text-primary transition">Technologies</a>
+                    <a href="automation.html" class="hover:text-primary transition">Automation</a>
+                    <a href="portfolio.html" class="text-primary font-medium">Ready Sites</a>
+                    <a href="team.html" class="hover:text-primary transition">Team</a>
+                    <a href="future.html" class="hover:text-primary transition">Future AI</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-primary to-secondary px-5 py-2 rounded-full font-medium hover:opacity-90 transition">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-t border-white/10">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block hover:text-primary">Home</a>
+                <a href="services.html" class="block hover:text-primary">Services</a>
+                <a href="technologies.html" class="block hover:text-primary">Technologies</a>
+                <a href="automation.html" class="block hover:text-primary">Automation</a>
+                <a href="portfolio.html" class="block text-primary">Ready Sites</a>
+                <a href="team.html" class="block hover:text-primary">Team</a>
+                <a href="future.html" class="block hover:text-primary">Future AI</a>
+                <a href="contact.html" class="block bg-primary text-center py-2 rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="gradient-bg pt-28 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Ready-Made Websites</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">Pre-built, high-quality websites ready for quick customization and launch. Includes payment integration (bKash, Nagad, PayPal, Stripe, Bank Transfer).</p>
+        </div>
+    </section>
+
+    <!-- Ready Sites -->
+    <section class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Site 1 -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Agency Template" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Modern Agency Pro</h3>
+                            <span class="text-primary font-bold">$299</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Full agency website with services, portfolio, team, blog & contact. Built with React + Tailwind. Fully responsive.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">React</span>
+                            <span class="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded">Payment Ready</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-primary/20 hover:bg-primary/30 text-primary py-2 rounded-lg font-medium transition">Buy / Customize</a>
+                    </div>
+                </div>
+
+                <!-- Site 2 -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="E-commerce" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">ShopFlow E-commerce</h3>
+                            <span class="text-primary font-bold">$449</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Complete online store with cart, checkout, product filters. Shopify or WooCommerce version available. Multi-payment support.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded">Shopify</span>
+                            <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded">WooCommerce</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-primary/20 hover:bg-primary/30 text-primary py-2 rounded-lg font-medium transition">Buy / Customize</a>
+                    </div>
+                </div>
+
+                <!-- Site 3 -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241c7c03aa0?w=600&q=80" alt="Portfolio" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Creative Portfolio</h3>
+                            <span class="text-primary font-bold">$149</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Elegant single/multi-page portfolio for freelancers & creatives. Smooth animations with GSAP, project gallery & contact form.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">HTML/CSS/JS</span>
+                            <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-400 rounded">GSAP</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-primary/20 hover:bg-primary/30 text-primary py-2 rounded-lg font-medium transition">Buy / Customize</a>
+                    </div>
+                </div>
+
+                <!-- Site 4 -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">HotelBook Pro</h3>
+                            <span class="text-primary font-bold">$599</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Full hotel booking system with room management, availability calendar, guest portal, and payment gateway integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">MERN</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded">Booking Engine</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-primary/20 hover:bg-primary/30 text-primary py-2 rounded-lg font-medium transition">Buy / Customize</a>
+                    </div>
+                </div>
+
+                <!-- Site 5 -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&q=80" alt="LMS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">LearnHub LMS</h3>
+                            <span class="text-primary font-bold">$499</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Online course platform with video lessons, quizzes, progress tracking, certificates, and student dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">Next.js</span>
+                            <span class="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded">Full-Stack</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-primary/20 hover:bg-primary/30 text-primary py-2 rounded-lg font-medium transition">Buy / Customize</a>
+                    </div>
+                </div>
+
+                <!-- Site 6 -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Foodie Order</h3>
+                            <span class="text-primary font-bold">$349</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Restaurant ordering website with digital menu, cart, order tracking, and delivery management system.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">React</span>
+                            <span class="text-xs px-2 py-1 bg-red-500/20 text-red-400 rounded">Real-time</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-primary/20 hover:bg-primary/30 text-primary py-2 rounded-lg font-medium transition">Buy / Customize</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="mt-16 bg-darker border border-white/10 rounded-2xl p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">Secure Payment Options</h3>
+                <p class="text-gray-400 mb-6">All ready-made websites support multiple payment methods for your convenience.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-5 py-2.5 bg-pink-500/20 text-pink-300 rounded-full font-medium"><i class="fas fa-mobile-alt mr-2"></i>bKash</span>
+                    <span class="px-5 py-2.5 bg-orange-500/20 text-orange-300 rounded-full font-medium"><i class="fas fa-mobile-alt mr-2"></i>Nagad</span>
+                    <span class="px-5 py-2.5 bg-blue-500/20 text-blue-300 rounded-full font-medium"><i class="fab fa-paypal mr-2"></i>PayPal</span>
+                    <span class="px-5 py-2.5 bg-indigo-500/20 text-indigo-300 rounded-full font-medium"><i class="fab fa-stripe-s mr-2"></i>Stripe</span>
+                    <span class="px-5 py-2.5 bg-green-500/20 text-green-300 rounded-full font-medium"><i class="fas fa-university mr-2"></i>Bank Transfer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 gradient-bg">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Need Something Custom?</h2>
+            <p class="text-gray-400 mb-8">We can fully customize any ready-made template or build from scratch according to your exact requirements.</p>
+            <a href="contact.html" class="inline-block bg-gradient-to-r from-primary to-secondary px-8 py-3.5 rounded-full font-semibold hover:opacity-90 transition">Get Custom Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold">A</div>
+                        <span class="text-lg font-bold">AFN Tech</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Professional website development & automation solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="technologies.html" class="hover:text-primary">Technologies</a></li>
+                        <li><a href="automation.html" class="hover:text-primary">Automation</a></li>
+                        <li><a href="portfolio.html" class="hover:text-primary">Ready Sites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="team.html" class="hover:text-primary">Our Team</a></li>
+                        <li><a href="future.html" class="hover:text-primary">Future AI</a></li>
+                        <li><a href="contact.html" class="hover:text-primary">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Payment Methods</h4>
+                    <div class="flex flex-wrap gap-2 text-sm text-gray-400">
+                        <span class="px-3 py-1 bg-white/5 rounded">bKash</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Nagad</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">PayPal</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Stripe</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Bank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-gray-500">© 2025 AFN Tech. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

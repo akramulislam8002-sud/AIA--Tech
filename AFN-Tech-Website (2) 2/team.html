@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2); }
+    </style>
+</head>
+<body class="bg-darker text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold text-xl">A</div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AFN Tech</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-primary transition">Home</a>
+                    <a href="services.html" class="hover:text-primary transition">Services</a>
+                    <a href="technologies.html" class="hover:text-primary transition">Technologies</a>
+                    <a href="automation.html" class="hover:text-primary transition">Automation</a>
+                    <a href="portfolio.html" class="hover:text-primary transition">Ready Sites</a>
+                    <a href="team.html" class="text-primary font-medium">Team</a>
+                    <a href="future.html" class="hover:text-primary transition">Future AI</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-primary to-secondary px-5 py-2 rounded-full font-medium hover:opacity-90 transition">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-t border-white/10">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block hover:text-primary">Home</a>
+                <a href="services.html" class="block hover:text-primary">Services</a>
+                <a href="technologies.html" class="block hover:text-primary">Technologies</a>
+                <a href="automation.html" class="block hover:text-primary">Automation</a>
+                <a href="portfolio.html" class="block hover:text-primary">Ready Sites</a>
+                <a href="team.html" class="block text-primary">Team</a>
+                <a href="future.html" class="block hover:text-primary">Future AI</a>
+                <a href="contact.html" class="block bg-primary text-center py-2 rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="gradient-bg pt-28 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Meet Our Team</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">Passionate developers and automation experts dedicated to delivering high-quality digital solutions for your business.</p>
+        </div>
+    </section>
+
+    <!-- Team Members -->
+    <section class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Akramul Islam -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden text-center">
+                    <div class="h-56 bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-5xl font-bold shadow-xl">AI</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-1">Akramul Islam</h3>
+                        <p class="text-primary font-medium mb-4">Owner of AFN Tech</p>
+                        <p class="text-gray-400 text-sm mb-5 leading-relaxed">Visionary founder and lead strategist of AFN Tech. With deep expertise in modern web technologies and business automation, Akramul leads the company with a focus on quality, security, and client success. He oversees project architecture and ensures every delivery meets the highest standards.</p>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">Front-End</span>
+                            <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">WordPress</span>
+                            <span class="text-xs px-3 py-1 bg-green-500/20 text-green-400 rounded-full">Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ayman Abid -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden text-center">
+                    <div class="h-56 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 flex items-center justify-center">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-5xl font-bold shadow-xl">AA</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-1">Ayman Abid</h3>
+                        <p class="text-primary font-medium mb-4">Senior Developer of AFN Tech</p>
+                        <p class="text-gray-400 text-sm mb-5 leading-relaxed">Experienced senior developer specializing in CMS platforms and full-stack solutions. Ayman brings strong skills in building robust WordPress and Shopify stores as well as scalable MERN applications. Known for clean code, attention to detail, and delivering projects on time.</p>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">WordPress</span>
+                            <span class="text-xs px-3 py-1 bg-green-500/20 text-green-400 rounded-full">Shopify</span>
+                            <span class="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">MERN-Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faysal Nixon -->
+                <div class="card-hover bg-darker border border-white/10 rounded-2xl overflow-hidden text-center">
+                    <div class="h-56 bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-5xl font-bold shadow-xl">FN</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-1">Faysal Nixon</h3>
+                        <p class="text-primary font-medium mb-4">Senior Developer of AFN Tech</p>
+                        <p class="text-gray-400 text-sm mb-5 leading-relaxed">Full-stack specialist with strong command over both MERN and advanced full-stack technologies including Next.js, Python, and modern backend systems. Faysal focuses on performance, scalability, and building secure, production-ready applications for complex business needs.</p>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">MERN-Stack</span>
+                            <span class="text-xs px-3 py-1 bg-secondary/20 text-secondary rounded-full">Full-Stack</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full">Next.js / Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-16 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-shield-alt text-2xl text-green-400 mb-3"></i>
+                    <h4 class="font-semibold">Security First</h4>
+                    <p class="text-xs text-gray-400 mt-1">Every project built with modern security practices</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-rocket text-2xl text-primary mb-3"></i>
+                    <h4 class="font-semibold">Fast Delivery</h4>
+                    <p class="text-xs text-gray-400 mt-1">Efficient workflows for on-time project completion</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-headset text-2xl text-blue-400 mb-3"></i>
+                    <h4 class="font-semibold">Dedicated Support</h4>
+                    <p class="text-xs text-gray-400 mt-1">Ongoing support after project handover</p>
+                </div>
+                <div class="bg-darker/80 border border-white/10 rounded-xl p-5 text-center">
+                    <i class="fas fa-code text-2xl text-purple-400 mb-3"></i>
+                    <h4 class="font-semibold">Clean Code</h4>
+                    <p class="text-xs text-gray-400 mt-1">Maintainable, scalable, and well-documented code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold">A</div>
+                        <span class="text-lg font-bold">AFN Tech</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Professional website development & automation solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="technologies.html" class="hover:text-primary">Technologies</a></li>
+                        <li><a href="automation.html" class="hover:text-primary">Automation</a></li>
+                        <li><a href="portfolio.html" class="hover:text-primary">Ready Sites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="team.html" class="hover:text-primary">Our Team</a></li>
+                        <li><a href="future.html" class="hover:text-primary">Future AI</a></li>
+                        <li><a href="contact.html" class="hover:text-primary">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Payment Methods</h4>
+                    <div class="flex flex-wrap gap-2 text-sm text-gray-400">
+                        <span class="px-3 py-1 bg-white/5 rounded">bKash</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Nagad</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">PayPal</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Stripe</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Bank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-gray-500">© 2025 AFN Tech. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

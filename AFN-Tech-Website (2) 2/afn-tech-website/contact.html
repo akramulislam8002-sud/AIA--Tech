@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#38bdf8',
+                        cream: '#fffbeb',
+                        creamdark: '#fef3c7',
+                        darktext: '#0f172a',
+                        muted: '#64748b',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .logo-font { font-family: 'Poppins', sans-serif; }
+        .nav-shadow { box-shadow: 0 4px 20px rgba(14, 165, 233, 0.08); }
+        .card-shadow { box-shadow: 0 10px 40px rgba(14, 165, 233, 0.08); }
+        .btn-gradient { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .btn-gradient:hover { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+    </style>
+</head>
+<body class="bg-white text-darktext">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md nav-shadow border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2.5 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-xl flex items-center justify-center shadow-lg shadow-sky-200 group-hover:scale-105 transition">
+                        <span class="text-white font-bold text-lg logo-font">A</span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold logo-font tracking-tight text-sky-600">AFN</span>
+                        <span class="text-xl font-semibold logo-font text-slate-700"> Tech</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">Home</a>
+                    <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">Services</a>
+                    <a href="technologies.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">Technologies</a>
+                    <a href="automation.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">Automation</a>
+                    <a href="portfolio.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">Ready Sites</a>
+                    <a href="team.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">Team</a>
+                    <a href="future.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">Future AI</a>
+                    <a href="contact.html" class="ml-2 btn-gradient text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md shadow-sky-200 hover:shadow-lg transition">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sky-100">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-sky-50">Home</a>
+                <a href="services.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-sky-50">Services</a>
+                <a href="technologies.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-sky-50">Technologies</a>
+                <a href="automation.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-sky-50">Automation</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-sky-50">Ready Sites</a>
+                <a href="team.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-sky-50">Team</a>
+                <a href="future.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-sky-50">Future AI</a>
+                <a href="contact.html" class="block mt-2 btn-gradient text-white text-center py-2.5 rounded-lg font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-28 pb-14 bg-gradient-to-b from-sky-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Contact Us</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-lg">Want to get a best deal? Fill out the form below and our team will get back to you shortly.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 gap-10">
+                <!-- Info -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-3">Get In Touch</h2>
+                        <p class="text-slate-500 text-sm leading-relaxed">Whether you need a custom website, ready-made solution, or complete automation setup — we’re here to help you get the best deal.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-11 h-11 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">Email</h4>
+                                <p class="text-sm text-slate-500">akramulislam8002@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-11 h-11 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">Phone</h4>
+                                <p class="text-sm text-slate-500">+880 1XXX-XXXXXX</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-11 h-11 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-sky-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">Location</h4>
+                                <p class="text-sm text-slate-500">Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <h4 class="font-semibold text-slate-800 mb-3">We Accept</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-pink-50 text-pink-600 text-sm rounded-lg border border-pink-100 font-medium">bKash</span>
+                            <span class="px-3 py-1.5 bg-orange-50 text-orange-600 text-sm rounded-lg border border-orange-100 font-medium">Nagad</span>
+                            <span class="px-3 py-1.5 bg-blue-50 text-blue-600 text-sm rounded-lg border border-blue-100 font-medium">PayPal</span>
+                            <span class="px-3 py-1.5 bg-indigo-50 text-indigo-600 text-sm rounded-lg border border-indigo-100 font-medium">Stripe</span>
+                            <span class="px-3 py-1.5 bg-emerald-50 text-emerald-600 text-sm rounded-lg border border-emerald-100 font-medium">Bank</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow border border-sky-50">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Want to get a best deal?</h3>
+                        <p class="text-slate-500 text-sm mb-6">Fill the form and we’ll contact you with the best offer. Your message will be sent directly to our email.</p>
+                        
+                        <!-- FormSubmit.co - sends to akramulislam8002@gmail.com -->
+                        <form action="https://formsubmit.co/akramulislam8002@gmail.com" method="POST" class="space-y-5">
+                            <!-- FormSubmit settings -->
+                            <input type="hidden" name="_subject" value="New Lead from AFN Tech Website">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
+                            <!-- Optional: disable auto-response or customize -->
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Name *</label>
+                                <input type="text" name="name" required placeholder="Your full name"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition text-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Phone Number *</label>
+                                <input type="tel" name="phone" required placeholder="+880 1XXX-XXXXXX"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition text-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Email *</label>
+                                <input type="email" name="email" required placeholder="your@email.com"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition text-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Message / Project Details</label>
+                                <textarea name="message" rows="4" placeholder="Tell us about your project, website type, budget or any specific requirements..."
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition resize-none text-slate-800"></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-gradient text-white py-3.5 rounded-xl font-semibold text-lg shadow-md shadow-sky-200 hover:shadow-lg transition">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+
+                        <p class="text-xs text-slate-400 mt-4 text-center">
+                            <i class="fas fa-lock mr-1"></i> Your information is secure. Messages go directly to our inbox.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-sky-500 to-sky-400 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">A</span>
+                        </div>
+                        <span class="text-lg font-bold text-white logo-font">AFN Tech</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Professional website development & automation solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="hover:text-sky-400 transition">Services</a></li>
+                        <li><a href="technologies.html" class="hover:text-sky-400 transition">Technologies</a></li>
+                        <li><a href="automation.html" class="hover:text-sky-400 transition">Automation</a></li>
+                        <li><a href="portfolio.html" class="hover:text-sky-400 transition">Ready Sites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="team.html" class="hover:text-sky-400 transition">Our Team</a></li>
+                        <li><a href="future.html" class="hover:text-sky-400 transition">Future AI</a></li>
+                        <li><a href="contact.html" class="hover:text-sky-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Payment Methods</h4>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="px-3 py-1 bg-slate-800 rounded">bKash</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded">Nagad</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded">PayPal</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded">Stripe</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded">Bank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-6 text-center text-sm text-slate-500">© 2025 AFN Tech. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

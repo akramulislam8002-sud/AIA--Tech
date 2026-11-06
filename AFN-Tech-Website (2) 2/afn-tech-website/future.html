@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future AI - AFN Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); }
+        .typing::after { content: '|'; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-lg flex items-center justify-center font-bold text-xl">A</div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-sky-500 to-sky-400 bg-clip-text text-transparent">AFN Tech</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-primary transition">Home</a>
+                    <a href="services.html" class="hover:text-primary transition">Services</a>
+                    <a href="technologies.html" class="hover:text-primary transition">Technologies</a>
+                    <a href="automation.html" class="hover:text-primary transition">Automation</a>
+                    <a href="portfolio.html" class="hover:text-primary transition">Ready Sites</a>
+                    <a href="team.html" class="hover:text-primary transition">Team</a>
+                    <a href="future.html" class="text-primary font-medium">Future AI</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-sky-500 to-sky-400 px-5 py-2 rounded-full font-medium hover:opacity-90 transition">Contact Us</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#fffbeb] border-t border-slate-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block hover:text-primary">Home</a>
+                <a href="services.html" class="block hover:text-primary">Services</a>
+                <a href="technologies.html" class="block hover:text-primary">Technologies</a>
+                <a href="automation.html" class="block hover:text-primary">Automation</a>
+                <a href="portfolio.html" class="block hover:text-primary">Ready Sites</a>
+                <a href="team.html" class="block hover:text-primary">Team</a>
+                <a href="future.html" class="block text-primary">Future AI</a>
+                <a href="contact.html" class="block bg-primary text-center py-2 rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="gradient-bg pt-28 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="inline-block px-4 py-1.5 bg-primary/20 border border-primary/40 rounded-full text-sm text-primary mb-6">
+                <i class="fas fa-robot mr-2"></i>Coming Soon
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Website Builder</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-lg">Describe your website in plain language and watch AI generate a complete, ready-to-use site structure. Currently in development — try the basic live demo below.</p>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="py-20 bg-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border border-slate-100 rounded-2xl p-6 md:p-8">
+                <h2 class="text-2xl font-bold mb-2 flex items-center gap-2">
+                    <i class="fas fa-magic text-primary"></i> Live Demo – Basic AI Generator
+                </h2>
+                <p class="text-slate-500 text-sm mb-6">Type a simple request (e.g. “create a single page portfolio website”) and see a basic 3-page website structure generated instantly.</p>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-2">What kind of website do you want?</label>
+                    <div class="flex gap-3">
+                        <input type="text" id="ai-prompt" placeholder="Example: create a single page portfolio website" 
+                            class="flex-1 bg-[#fffbeb] border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition">
+                        <button onclick="generateSite()" class="bg-gradient-to-r from-sky-500 to-sky-400 px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition whitespace-nowrap">
+                            Generate <i class="fas fa-sparkles ml-1"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <button onclick="setPrompt('create a single page portfolio website')" class="text-xs px-3 py-1 bg-white/5 hover:bg-white/10 rounded-full transition">Portfolio</button>
+                        <button onclick="setPrompt('create an e-commerce website for clothing')" class="text-xs px-3 py-1 bg-white/5 hover:bg-white/10 rounded-full transition">E-commerce</button>
+                        <button onclick="setPrompt('create a restaurant food ordering website')" class="text-xs px-3 py-1 bg-white/5 hover:bg-white/10 rounded-full transition">Food Ordering</button>
+                        <button onclick="setPrompt('create a hotel booking website')" class="text-xs px-3 py-1 bg-white/5 hover:bg-white/10 rounded-full transition">Hotel Booking</button>
+                    </div>
+                </div>
+
+                <!-- Result Area -->
+                <div id="result-area" class="hidden">
+                    <div class="border-t border-slate-100 pt-6">
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                            <span class="text-sm text-green-400 font-medium">Generated Successfully</span>
+                        </div>
+                        <div id="result-content" class="bg-[#fffbeb] rounded-xl p-5 border border-slate-100 space-y-4">
+                            <!-- Dynamic content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading -->
+                <div id="loading" class="hidden text-center py-8">
+                    <div class="inline-block w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin mb-3"></div>
+                    <p class="text-slate-500">AI is generating your website structure...</p>
+                </div>
+            </div>
+
+            <!-- Coming Soon Features -->
+            <div class="mt-12 grid sm:grid-cols-3 gap-6">
+                <div class="bg-white border border-slate-100 rounded-xl p-5 text-center">
+                    <i class="fas fa-paint-brush text-2xl text-primary mb-3"></i>
+                    <h4 class="font-semibold mb-1">Full Design Generation</h4>
+                    <p class="text-xs text-slate-500">Complete HTML/CSS/JS output with modern UI</p>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-xl p-5 text-center">
+                    <i class="fas fa-mobile-alt text-2xl text-secondary mb-3"></i>
+                    <h4 class="font-semibold mb-1">Responsive by Default</h4>
+                    <p class="text-xs text-slate-500">Mobile-first designs generated automatically</p>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-xl p-5 text-center">
+                    <i class="fas fa-download text-2xl text-green-400 mb-3"></i>
+                    <h4 class="font-semibold mb-1">Export & Deploy</h4>
+                    <p class="text-xs text-slate-500">One-click export or deploy to hosting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-sky-500 to-sky-400 rounded-lg flex items-center justify-center font-bold">A</div>
+                        <span class="text-lg font-bold">AFN Tech</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">Professional website development & automation solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="technologies.html" class="hover:text-primary">Technologies</a></li>
+                        <li><a href="automation.html" class="hover:text-primary">Automation</a></li>
+                        <li><a href="portfolio.html" class="hover:text-primary">Ready Sites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="team.html" class="hover:text-primary">Our Team</a></li>
+                        <li><a href="future.html" class="hover:text-primary">Future AI</a></li>
+                        <li><a href="contact.html" class="hover:text-primary">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Payment Methods</h4>
+                    <div class="flex flex-wrap gap-2 text-sm text-slate-500">
+                        <span class="px-3 py-1 bg-white/5 rounded">bKash</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Nagad</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">PayPal</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Stripe</span>
+                        <span class="px-3 py-1 bg-white/5 rounded">Bank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 mt-10 pt-6 text-center text-sm text-gray-500">© 2025 AFN Tech. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        function setPrompt(text) {
+            document.getElementById('ai-prompt').value = text;
+        }
+
+        function generateSite() {
+            const prompt = document.getElementById('ai-prompt').value.trim().toLowerCase();
+            if (!prompt) {
+                alert('Please enter a website description!');
+                return;
+            }
+
+            document.getElementById('result-area').classList.add('hidden');
+            document.getElementById('loading').classList.remove('hidden');
+
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('result-area').classList.remove('hidden');
+
+                let title = 'Custom Website';
+                let pages = [];
+                let features = [];
+                let tech = 'HTML, CSS, JavaScript, Tailwind CSS';
+
+                if (prompt.includes('portfolio') || prompt.includes('single page')) {
+                    title = 'Professional Portfolio Website';
+                    pages = [
+                        { name: 'Home', desc: 'Hero section with intro, skills overview & call-to-action' },
+                        { name: 'Projects', desc: 'Project gallery with filters, images and detailed case studies' },
+                        { name: 'Contact', desc: 'Contact form, social links and location info' }
+                    ];
+                    features = ['Smooth scroll animations', 'Project modal previews', 'Responsive design', 'Dark/Light mode'];
+                    tech = 'HTML, CSS, JavaScript, Tailwind CSS, GSAP';
+                } else if (prompt.includes('e-commerce') || prompt.includes('shop') || prompt.includes('clothing')) {
+                    title = 'E-commerce Clothing Store';
+                    pages = [
+                        { name: 'Home', desc: 'Featured products, categories, hero banners & promotions' },
+                        { name: 'Shop', desc: 'Product listing with filters, sorting, search and pagination' },
+                        { name: 'Cart / Checkout', desc: 'Shopping cart, multi-step checkout with payment options' }
+                    ];
+                    features = ['Product variants', 'bKash/Nagad/Stripe payments', 'Order tracking', 'Wishlist'];
+                    tech = 'React / Next.js or Shopify, Tailwind, Payment Gateways';
+                } else if (prompt.includes('food') || prompt.includes('restaurant') || prompt.includes('ordering')) {
+                    title = 'Food Ordering Website';
+                    pages = [
+                        { name: 'Menu', desc: 'Digital menu with categories, images, prices and add-to-cart' },
+                        { name: 'Cart & Checkout', desc: 'Order summary, delivery address, payment selection' },
+                        { name: 'Order Tracking', desc: 'Real-time status updates for customers' }
+                    ];
+                    features = ['Real-time order status', 'Delivery zones', 'Multiple payment methods', 'Admin order panel'];
+                    tech = 'MERN Stack or React + Node, Tailwind, Socket.io';
+                } else if (prompt.includes('hotel') || prompt.includes('booking')) {
+                    title = 'Hotel Booking Website';
+                    pages = [
+                        { name: 'Home / Rooms', desc: 'Room listings with photos, amenities, pricing and availability' },
+                        { name: 'Booking', desc: 'Date picker, guest selection, room selection and booking form' },
+                        { name: 'My Bookings', desc: 'User dashboard to view and manage reservations' }
+                    ];
+                    features = ['Availability calendar', 'Multi-payment support', 'Email confirmations', 'Admin room management'];
+                    tech = 'Next.js / MERN, Tailwind, Calendar API, Payment Gateways';
+                } else {
+                    title = 'Custom 3-Page Website';
+                    pages = [
+                        { name: 'Home', desc: 'Main landing page with hero, features and CTA' },
+                        { name: 'About / Services', desc: 'Detailed information about services or company' },
+                        { name: 'Contact', desc: 'Contact form and business information' }
+                    ];
+                    features = ['Responsive layout', 'Contact form', 'Modern UI', 'SEO ready'];
+                    tech = 'HTML, CSS, JavaScript, Tailwind CSS';
+                }
+
+                let html = `
+                    <h3 class="text-xl font-bold text-primary mb-1">${title}</h3>
+                    <p class="text-sm text-slate-500 mb-4">Based on: "${document.getElementById('ai-prompt').value}"</p>
+                    
+                    <h4 class="font-semibold mb-2 flex items-center gap-2"><i class="fas fa-file-alt text-primary"></i> Suggested Pages (3 Pages)</h4>
+                    <div class="space-y-2 mb-4">
+                `;
+                pages.forEach((p, i) => {
+                    html += `<div class="bg-white rounded-lg p-3 border border-white/5">
+                        <span class="text-primary font-medium">${i+1}. ${p.name}</span>
+                        <p class="text-xs text-slate-500 mt-0.5">${p.desc}</p>
+                    </div>`;
+                });
+                html += `</div>
+                    <h4 class="font-semibold mb-2 flex items-center gap-2"><i class="fas fa-star text-yellow-400"></i> Key Features</h4>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                `;
+                features.forEach(f => {
+                    html += `<span class="text-xs px-2.5 py-1 bg-primary/10 text-primary rounded-full">${f}</span>`;
+                });
+                html += `</div>
+                    <h4 class="font-semibold mb-2 flex items-center gap-2"><i class="fas fa-code text-green-400"></i> Recommended Tech</h4>
+                    <p class="text-sm text-slate-600">${tech}</p>
+                    <div class="mt-5 p-3 bg-primary/10 border border-primary/30 rounded-lg text-sm">
+                        <i class="fas fa-info-circle text-primary mr-2"></i>
+                        This is a basic demo structure. Full AI Website Builder with complete code generation is <strong>Coming Soon</strong>!
+                    </div>
+                `;
+                document.getElementById('result-content').innerHTML = html;
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
